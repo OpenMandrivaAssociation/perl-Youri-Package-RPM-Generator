@@ -1,7 +1,7 @@
 %define module	Youri-Package-RPM-Generator
 %define name	perl-%{module}
 %define version 0.1.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -15,6 +15,8 @@ Url:		http://youri.zarb.org
 Buildrequires:	perl-devel
 %endif
 BuildRequires:  perl(URPM)
+BuildRequires:  perl-version
+Requires:       perl-version
 BuildArch:	    noarch
 BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
