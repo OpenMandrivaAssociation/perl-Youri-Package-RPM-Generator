@@ -1,7 +1,7 @@
 %define module	Youri-Package-RPM-Generator
 %define name	perl-%{module}
 %define version 0.1.0
-%define release %mkrel 2
+%define release %mkrel 4
 
 Name:		%{name}
 Version:	%{version}
