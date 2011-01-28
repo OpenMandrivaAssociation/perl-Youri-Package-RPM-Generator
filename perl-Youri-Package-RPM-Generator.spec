@@ -11,6 +11,7 @@ Url:		http://youri.zarb.org
 Source0:	http://youri.zarb.or/download/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:  perl(URPM)
 BuildRequires:  perl(Test::Exception)
+BuildRequires:  perl(Text::Template)
 BuildRequires:  perl-version
 Requires:       perl-version
 BuildArch:	    noarch
