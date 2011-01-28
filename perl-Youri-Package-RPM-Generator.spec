@@ -1,19 +1,14 @@
-%define module	Youri-Package-RPM-Generator
-%define name	perl-%{module}
-%define version 0.1.0
-%define release %mkrel 6
+%define upstream_name       Youri-Package-RPM-Generator
+%define upstream_version    0.1.1
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 Summary:	Template-based rpm generator
 License:	GPL or Artistic
 Group:		Development/Other
-Source:		http://youri.zarb.or/download/%{module}-v%{version}.tar.bz2
 Url:		http://youri.zarb.org
-%if %{mdkversion} < 1010
-Buildrequires:	perl-devel
-%endif
+Source0:	http://youri.zarb.or/download/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:  perl(URPM)
 BuildRequires:  perl-version
 Requires:       perl-version
@@ -28,7 +23,7 @@ This module generates rpm packages from a spec file template, for testing
 purposes.
 
 %prep
-%setup -q -n %{module}-v%{version}
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -46,7 +41,7 @@ rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
-%doc ChangeLog README
+%doc Changes README
 %{perl_vendorlib}/Youri
 %{_mandir}/man3/*
 
