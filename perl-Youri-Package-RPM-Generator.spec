@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    2
 Summary:	Template-based rpm generator
 License:	GPL or Artistic
 Group:		Development/Other
@@ -13,9 +13,9 @@ BuildRequires:  perl(URPM)
 BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Text::Template)
 BuildRequires:  perl-version
+BuildRequires:  perl-devel
 Requires:       perl-version
 BuildArch:	    noarch
-BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 YOURI stands for "Youri Offers an Upload & Repository Infrastucture". It aims
@@ -35,16 +35,49 @@ purposes.
 %__make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean 
-rm -rf %{buildroot}
-
 %files 
-%defattr(-,root,root)
 %doc Changes README
 %{perl_vendorlib}/Youri
 %{_mandir}/man3/*
 
+
+
+
+%changelog
+* Fri Jan 28 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.1.1-1mdv2011.0
++ Revision: 633675
+- new version
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.1.0-6mdv2010.0
++ Revision: 430675
+- rebuild
+
+* Fri Aug 01 2008 Thierry Vignaud <tv@mandriva.org> 0.1.0-5mdv2009.0
++ Revision: 258924
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0.1.0-4mdv2009.0
++ Revision: 246825
+- rebuild
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 0.1.0-2mdv2008.1
++ Revision: 136373
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Mon Apr 23 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.1.0-2mdv2008.0
++ Revision: 17229
+- force dependency on perl-version
+
+
+* Fri Mar 09 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.1.0-1mdv2007.1
++ Revision: 138890
+- Imported perl-Youri-Package-RPM-Generator-0.1.0-1mdv2007.1 into SVN repository.
+
+* Fri Mar 09 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.1.0-1mdv2007.1
+- first mdv release
 
