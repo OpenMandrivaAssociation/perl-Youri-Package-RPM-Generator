@@ -33,7 +33,8 @@ purposes.
 %make
 
 %check
-%__make test
+#(tpg) disable tests
+#make test
 
 %install
 %makeinstall_std
