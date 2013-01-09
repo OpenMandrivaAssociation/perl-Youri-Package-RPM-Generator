@@ -1,22 +1,22 @@
 %define upstream_name       Youri-Package-RPM-Generator
-%define upstream_version    0.1.1
+%define upstream_version    0.1.3
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	1
 Summary:	Template-based rpm generator
 License:	GPL or Artistic
 Group:		Development/Other
-Url:		http://youri.zarb.org
-Source0:	http://youri.zarb.or/download/%{upstream_name}-%{upstream_version}.tar.gz
-BuildRequires:  perl(URPM)
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/G/GR/GROUSSE/%{upstream_name}-%{upstream_version}.tar.gz
+BuildRequires:	perl(URPM)
 BuildRequires:	perl-JSON-PP
-BuildRequires:  perl(Test::Exception)
-BuildRequires:  perl(Text::Template)
-BuildRequires:  perl-version
-BuildRequires:  perl-devel
-Requires:       perl-version
-BuildArch:	    noarch
+BuildRequires:	perl(Test::Exception)
+BuildRequires:	perl(Text::Template)
+BuildRequires:	perl-version
+BuildRequires:	perl-devel
+Requires:		perl-version
+BuildArch:		noarch
 
 %description
 YOURI stands for "Youri Offers an Upload & Repository Infrastucture". It aims
@@ -39,11 +39,9 @@ purposes.
 %makeinstall_std
 
 %files 
-%doc Changes README
+%doc Changes README META.yml
 %{perl_vendorlib}/Youri
 %{_mandir}/man3/*
-
-
 
 
 %changelog
