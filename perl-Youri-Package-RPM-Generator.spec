@@ -7,7 +7,7 @@ Release:	3
 Summary:	Template-based rpm generator
 License:	GPL or Artistic
 Group:		Development/Other
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/G/GR/GROUSSE/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:	perl(URPM)
 BuildRequires:	perl-JSON-PP
