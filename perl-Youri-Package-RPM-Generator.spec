@@ -9,6 +9,7 @@ License:	GPL or Artistic
 Group:		Development/Other
 Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/G/GR/GROUSSE/%{upstream_name}-%{upstream_version}.tar.gz
+BuildRequires:	make
 BuildRequires:	perl(URPM)
 BuildRequires:	perl-JSON-PP
 BuildRequires:	perl(Test::Exception)
