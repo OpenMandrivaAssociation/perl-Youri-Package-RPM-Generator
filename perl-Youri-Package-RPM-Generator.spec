@@ -1,14 +1,14 @@
 %define upstream_name       Youri-Package-RPM-Generator
-%define upstream_version    0.1.3
+%define upstream_version    v0.1.3
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 Summary:	Template-based rpm generator
 License:	GPL or Artistic
 Group:		Development/Other
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/G/GR/GROUSSE/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Youri-Package-RPM-Generator
+Source0:	https://cpan.metacpan.org/authors/id/G/GR/GROUSSE/Youri-Package-RPM-Generator-%{upstream_version}.tar.gz
 BuildRequires:	make
 BuildRequires:	perl(URPM)
 BuildRequires:	perl-JSON-PP
